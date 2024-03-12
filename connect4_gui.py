@@ -18,6 +18,6 @@ def draw_board(board, screen):
     for i in range(NUM_COL):
         for j in range(NUM_ROW):
             pygame.draw.rect(screen, PURPLE, (i*SQUARESIZE,j*SQUARESIZE+SQUARESIZE,SQUARESIZE,SQUARESIZE))
-            pygame.draw.circ(screen,BLACK,)
+            pygame.draw.circle(screen,BLACK, (i*SQUARESIZE+SQUARESIZE/2, j*SQUARESIZE+SQUARESIZE+SQUARESIZE/2) , RADIUS)
 
 
