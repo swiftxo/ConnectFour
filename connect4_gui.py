@@ -1,6 +1,6 @@
 import pygame
 import os 
-from connect4_functions import NUM_COL,NUM_ROW
+from connect4_functions import NUM_COL,NUM_ROW , PLAYER, PLAYR_PCE, AI, AI_PCE
 
 SQUARESIZE = 100
 BLACK = (0,0,0)
@@ -30,9 +30,9 @@ def draw_board(board, screen):
 
     for c in range(NUM_COL):
         for r in range(NUM_ROW):
-            if board[r][c] == 1:
+            if board[r][c] == PLAYR_PCE:
                 pygame.draw.circle(screen, RED, (int(c*SQUARESIZE+SQUARESIZE/2), int(height - (r*SQUARESIZE+SQUARESIZE/2))), RADIUS)
-            elif board[r][c] == 2:
+            elif board[r][c] == AI_PCE:
                 pygame.draw.circle(screen, YELLOW, (int(c*SQUARESIZE+SQUARESIZE/2), int(height - (r*SQUARESIZE+SQUARESIZE/2))), RADIUS)
     pygame.display.update()
 
